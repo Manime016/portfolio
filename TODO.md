@@ -48,6 +48,13 @@
 
 ---
 
+## ✅ Step 8: Make project Vercel-ready for one-click deployment
+- [x] Created `api/contact.js` — Vercel serverless function for contact form
+- [x] Created `vercel.json` — Rewrites for SPA routing
+- [x] Frontend + backend deployable in one go on Vercel
+
+---
+
 ## 🏁 All optimizations complete!
 
 **Build output:**
