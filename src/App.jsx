@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react'
+import { lazy, Suspense } from 'react'
 import './App.css'
 import Header from './components/Header'
 
@@ -20,56 +20,21 @@ function SectionFallback() {
 }
 
 function App() {
-  useEffect(() => {
-    const move = (event) => {
-      document.documentElement.style.setProperty('--mouse-x', `${event.clientX}px`)
-      document.documentElement.style.setProperty('--mouse-y', `${event.clientY}px`)
-    }
-
-    window.addEventListener('pointermove', move, { passive: true })
-    return () => window.removeEventListener('pointermove', move)
-  }, [])
-
   return (
     <div className="page-shell">
       <Header />
-
       <main>
-        <Suspense fallback={<SectionFallback />}>
-          <Hero />
-        </Suspense>
-
-        <Suspense fallback={<SectionFallback />}>
-          <About />
-        </Suspense>
-
-        <Suspense fallback={<SectionFallback />}>
-          <Skills />
-        </Suspense>
-
-        <Suspense fallback={<SectionFallback />}>
-          <Projects />
-        </Suspense>
-
-        <Suspense fallback={<SectionFallback />}>
-          <Internship />
-        </Suspense>
-
-        <Suspense fallback={<SectionFallback />}>
-          <Education />
-        </Suspense>
-
-        <Suspense fallback={<SectionFallback />}>
-          <Contact />
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <Footer />
-        </Suspense>
+        <Suspense fallback={<SectionFallback />}><Hero /></Suspense>
+        <Suspense fallback={<SectionFallback />}><About /></Suspense>
+        <Suspense fallback={<SectionFallback />}><Skills /></Suspense>
+        <Suspense fallback={<SectionFallback />}><Projects /></Suspense>
+        <Suspense fallback={<SectionFallback />}><Internship /></Suspense>
+        <Suspense fallback={<SectionFallback />}><Education /></Suspense>
+        <Suspense fallback={<SectionFallback />}><Contact /></Suspense>
+        <Suspense fallback={null}><Footer /></Suspense>
       </main>
     </div>
   )
 }
 
 export default App
-
