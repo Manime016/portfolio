@@ -3,7 +3,7 @@ import navigation from '../data/navigation'
 
 const RESUME_URL =
   import.meta.env.VITE_RESUME_URL ||
-  'https://drive.google.com/uc?export=download&id=1-4RGRG5i7nsXWe0bsoXJPOLnxZ5sbFP9'
+  'https://drive.google.com/uc?export=download&id=1I9-7JVf9BED-A9pRC3UiMFP8J-fboYoc'
 
 const Header = memo(function Header() {
   return (
