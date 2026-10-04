@@ -19,3 +19,270 @@
 @media(max-width:900px){.hero-photo{min-height:440px}}
 @media(max-width:720px){.hero-photo{min-height:380px;background-position:center top}}
 .project-links{display:flex;flex-wrap:wrap;gap:18px}.text-link--live{color:#fff}.text-link--live:hover{color:var(--accent)}
+
+/* ===== Motion + GUI enhancement layer ===== */
+:root{
+  --accent2:#7c5cff;
+  --cyan:#55e6ff;
+  --glow:rgba(200,255,61,.22);
+  --ease-smooth:cubic-bezier(.2,.75,.2,1);
+}
+body{overflow-x:hidden}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:100;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+  mix-blend-mode:screen;
+}
+.site-header{
+  transition:transform .3s var(--ease-smooth),border-color .3s ease,box-shadow .3s ease,background .3s ease;
+}
+.site-header:hover{
+  border-color:rgba(200,255,61,.18);
+  box-shadow:0 18px 55px rgba(0,0,0,.3),0 0 35px rgba(200,255,61,.035);
+}
+.brand{transition:color .25s ease,transform .25s var(--ease-smooth)}
+.brand:hover{color:var(--accent);transform:translateX(2px)}
+.site-nav a{position:relative;transition:color .25s ease}
+.site-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-7px;
+  height:2px;border-radius:99px;
+  background:var(--accent);
+  transform:scaleX(0);transform-origin:right;
+  transition:transform .3s var(--ease-smooth);
+  box-shadow:0 0 10px var(--accent);
+}
+.site-nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.btn{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  transition:transform .22s var(--ease-smooth),background .25s ease,border-color .25s ease,box-shadow .25s ease,filter .2s ease;
+}
+.btn::before{
+  content:"";
+  position:absolute;
+  top:-80%;left:-120%;
+  width:55%;height:260%;
+  transform:rotate(22deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
+  transition:left .55s var(--ease-smooth);
+  pointer-events:none;
+}
+.btn:hover::before{left:140%}
+.btn:active{transform:translateY(1px) scale(.96);filter:brightness(.92)}
+.btn-primary:hover{box-shadow:0 16px 38px rgba(200,255,61,.2),0 0 22px rgba(200,255,61,.1)}
+.btn-secondary:hover,.btn-outline:hover{box-shadow:0 10px 28px rgba(255,255,255,.05)}
+.hero-section{
+  isolation:isolate;
+  animation:heroEnter .8s var(--ease-smooth) both;
+}
+.hero-section::after{
+  content:"";
+  position:absolute;
+  width:520px;height:520px;
+  right:-190px;bottom:-280px;
+  border-radius:50%;
+  border:1px solid rgba(85,230,255,.08);
+  box-shadow:0 0 0 42px rgba(85,230,255,.018),0 0 0 84px rgba(85,230,255,.012);
+  animation:orbFloat 9s ease-in-out infinite;
+  pointer-events:none;
+}
+.hero-section:before{
+  animation:gridDrift 18s linear infinite;
+}
+.hero-kicker{
+  animation:kickerPulse 3s ease-in-out infinite;
+}
+.status-dot{animation:statusPulse 1.8s ease-in-out infinite}
+.hero-copy > *{animation:riseIn .7s var(--ease-smooth) both}
+.hero-copy > *:nth-child(1){animation-delay:.08s}
+.hero-copy > *:nth-child(2){animation-delay:.14s}
+.hero-copy > *:nth-child(3){animation-delay:.2s}
+.hero-copy > *:nth-child(4){animation-delay:.26s}
+.hero-copy > *:nth-child(5){animation-delay:.32s}
+.hero-copy > *:nth-child(6){animation-delay:.38s}
+.hero-panel{animation:panelEnter .9s .18s var(--ease-smooth) both}
+.profile-frame{
+  box-shadow:0 30px 80px rgba(0,0,0,.38),0 0 0 1px rgba(200,255,61,.025);
+  transition:transform .5s var(--ease-smooth),box-shadow .5s ease,border-color .5s ease;
+}
+.profile-frame::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  border-radius:inherit;
+  padding:1px;
+  background:linear-gradient(135deg,rgba(200,255,61,.45),transparent 28%,transparent 68%,rgba(124,92,255,.35));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+.profile-frame::after{
+  content:"";
+  position:absolute;
+  inset:-45%;
+  z-index:1;
+  pointer-events:none;
+  background:conic-gradient(from 0deg,transparent 0 72%,rgba(200,255,61,.16) 82%,transparent 90%);
+  animation:frameSweep 8s linear infinite;
+}
+.profile-frame:hover{
+  transform:translateY(-5px) rotateX(1deg);
+  border-color:rgba(200,255,61,.25);
+  box-shadow:0 36px 90px rgba(0,0,0,.45),0 0 45px rgba(200,255,61,.08);
+}
+.hero-photo{position:relative;z-index:0}
+.profile-overlay{z-index:4}
+.profile-overlay span{
+  transition:transform .25s var(--ease-smooth),background .25s ease,border-color .25s ease;
+}
+.profile-overlay span:hover{
+  transform:translateY(-2px);
+  border-color:rgba(200,255,61,.3);
+  background:rgba(200,255,61,.1);
+}
+.hero-metric{
+  transition:transform .3s var(--ease-smooth),border-color .3s ease,box-shadow .3s ease;
+}
+.hero-metric:hover{
+  transform:translateY(-3px);
+  border-color:rgba(200,255,61,.22);
+  box-shadow:0 14px 35px rgba(0,0,0,.2);
+}
+.gui-decor{
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+  overflow:hidden;
+}
+.gui-ring{
+  position:absolute;
+  width:170px;height:170px;
+  right:-72px;top:34px;
+  border:1px solid rgba(200,255,61,.16);
+  border-radius:50%;
+  box-shadow:inset 0 0 30px rgba(200,255,61,.035),0 0 25px rgba(200,255,61,.025);
+  animation:ringSpin 16s linear infinite;
+}
+.gui-ring::before,.gui-ring::after{
+  content:"";
+  position:absolute;
+  inset:16px;
+  border:1px dashed rgba(124,92,255,.24);
+  border-radius:50%;
+}
+.gui-ring::after{inset:42px;border-style:solid;border-color:rgba(85,230,255,.15);animation:ringSpin 7s linear infinite reverse}
+.gui-cross{
+  position:absolute;
+  left:18px;top:18px;width:18px;height:18px;
+  opacity:.7;
+}
+.gui-cross::before,.gui-cross::after{
+  content:"";position:absolute;background:var(--accent);
+  box-shadow:0 0 10px rgba(200,255,61,.4);
+}
+.gui-cross::before{width:100%;height:1px;top:50%}
+.gui-cross::after{height:100%;width:1px;left:50%}
+.gui-line{
+  position:absolute;
+  right:22px;bottom:18px;
+  width:90px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+  opacity:.5;
+  animation:lineBlink 2.4s ease-in-out infinite;
+}
+.gui-label{
+  position:absolute;
+  right:22px;top:22px;
+  color:rgba(223,228,237,.55);
+  font:600 .58rem/1 'DM Mono',monospace;
+  letter-spacing:.16em;
+}
+.section{
+  position:relative;
+  overflow:hidden;
+  transition:border-color .35s ease,box-shadow .35s ease;
+  animation:sectionEnter .7s var(--ease-smooth) both;
+}
+.section::before{
+  content:"";
+  position:absolute;
+  width:260px;height:260px;
+  right:-180px;top:-180px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(124,92,255,.12),transparent 68%);
+  pointer-events:none;
+}
+.section:hover{
+  border-color:rgba(255,255,255,.13);
+  box-shadow:0 20px 65px rgba(0,0,0,.14);
+}
+.info-card,.skill-card,.project-item,.education-item,.detail-card,.contact-info-card,.contact-form{
+  position:relative;
+  overflow:hidden;
+}
+.info-card::after,.skill-card::after,.project-item::after,.education-item::after{
+  content:"";
+  position:absolute;
+  width:100px;height:100px;
+  right:-55px;bottom:-55px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(200,255,61,.08),transparent 68%);
+  transition:transform .45s var(--ease-smooth);
+  pointer-events:none;
+}
+.info-card:hover::after,.skill-card:hover::after,.project-item:hover::after,.education-item:hover::after{transform:scale(2.2)}
+.info-card:hover,.skill-card:hover,.project-item:hover,.education-item:hover{
+  box-shadow:0 14px 35px rgba(0,0,0,.16);
+}
+.project-arrow{
+  transition:transform .3s var(--ease-smooth),background .25s ease,border-color .25s ease,color .25s ease;
+}
+.project-arrow:hover{transform:rotate(8deg) scale(1.08);box-shadow:0 0 22px rgba(200,255,61,.16)}
+.project-item:nth-child(1){animation:riseIn .55s .08s both}
+.project-item:nth-child(2){animation:riseIn .55s .14s both}
+.project-item:nth-child(3){animation:riseIn .55s .20s both}
+.project-item:nth-child(4){animation:riseIn .55s .26s both}
+.project-tags span{transition:transform .2s ease,border-color .2s ease,color .2s ease}
+.project-tags span:hover{transform:translateY(-2px);border-color:rgba(200,255,61,.25);color:var(--accent)}
+.text-link{position:relative}
+.text-link::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-4px;height:1px;
+  background:var(--accent);
+  transform:scaleX(0);transform-origin:right;
+  transition:transform .3s var(--ease-smooth);
+}
+.text-link:hover::after{transform:scaleX(1);transform-origin:left}
+input,textarea{transition:border-color .25s ease,box-shadow .25s ease,transform .2s ease}
+input:focus,textarea:focus{transform:translateY(-1px)}
+@keyframes heroEnter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes riseIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes panelEnter{from{opacity:0;transform:translateX(24px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes sectionEnter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes gridDrift{from{background-position:0 0}to{background-position:44px 44px}}
+@keyframes orbFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,-15px)}}
+@keyframes ringSpin{to{transform:rotate(360deg)}}
+@keyframes frameSweep{to{transform:rotate(360deg)}}
+@keyframes statusPulse{0%,100%{transform:scale(1);box-shadow:0 0 10px var(--accent)}50%{transform:scale(1.3);box-shadow:0 0 22px var(--accent)}}
+@keyframes kickerPulse{0%,100%{box-shadow:0 0 0 rgba(200,255,61,0)}50%{box-shadow:0 0 24px rgba(200,255,61,.05)}}
+@keyframes lineBlink{0%,100%{opacity:.2}50%{opacity:.8}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}
+}
+@media(max-width:720px){
+  .gui-ring{width:125px;height:125px;right:-65px;top:20px}
+  .gui-label{right:16px;top:16px}
+  .gui-line{right:16px;bottom:14px;width:60px}
+}
