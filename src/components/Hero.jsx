@@ -7,42 +7,42 @@ const PROFILE_IMAGE_URL =
 const Hero = memo(function Hero() {
   return (
     <section id="home" className="hero-section">
-      <div className="hero-grid-line" aria-hidden="true" />
-      <div className="hero-copy">
-        <div className="hero-kicker">
-          <span className="status-dot" />
-          Available for Python / Backend opportunities
-          <span className="kicker-arrow">↗</span>
+      <div className="hero-intro">
+        <p className="eyebrow"><span /> Open to Python / Backend opportunities</p>
+        <p className="hero-overline">PYTHON BACKEND · FULL-STACK · BENGALURU</p>
+        <h1>Building the<br /><em>logic behind</em><br />useful products.</h1>
+        <p className="hero-lede">
+          I&apos;m Manikanta L., an MCA graduate who builds APIs, backend systems and full-stack applications with Python, FastAPI, Flask, MySQL and modern web technologies.
+        </p>
+        <div className="hero-cta">
+          <a href="#projects" className="button button-solid">View selected work <span>↗</span></a>
+          <a href="#contact" className="button button-ghost">Start a conversation <span>→</span></a>
         </div>
-        <p className="pretitle">HELLO, I&apos;M</p>
-        <h1>Manikanta <span>L.</span></h1>
-        <p className="subtitle">Python Backend / Full-Stack Developer</p>
-        <p className="hero-description">I build practical web applications and backend systems with Python, FastAPI, Flask, MySQL, and modern web technologies — with a focus on clean architecture, reliable APIs, and products that feel intentional.</p>
-        <div className="hero-actions">
-          <a href="#projects" className="btn btn-primary">Explore My Work <span>↗</span></a>
-          <a href="#contact" className="btn btn-secondary">Let&apos;s Talk <span>→</span></a>
-        </div>
-        <div className="social-links">
-          <a href="https://github.com/Manime016" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-          <a href="https://linkedin.com/in/manikanta-l" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-          <a href="mailto:lmanikanta016@gmail.com">Email <span>↗</span></a>
-        </div>
-        <div className="hero-proof">
-          <div><strong>8.21</strong><span>MCA CGPA</span></div>
-          <div><strong>04</strong><span>Featured projects</span></div>
-          <div><strong>01</strong><span>Industry internship</span></div>
+        <div className="hero-links">
+          <a href="https://github.com/Manime016" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://linkedin.com/in/manikanta-l" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="mailto:lmanikanta016@gmail.com">lmanikanta016@gmail.com ↗</a>
         </div>
       </div>
-      <div className="hero-panel hero-profile">
-        <div className="hero-orbit-glow" aria-hidden="true" />
-        <div className="profile-frame">
+
+      <div className="hero-visual">
+        <div className="hero-image-wrap">
           <div className="hero-photo" role="img" aria-label="Portrait of Manikanta L" style={{ backgroundImage: `url("${PROFILE_IMAGE_URL}")` }} />
-          <div className="profile-caption"><span>MANIKANTA L.</span><span>PYTHON / BACKEND</span></div>
+          <div className="hero-image-label">
+            <span>MANIKANTA L.</span>
+            <span>SOFTWARE DEVELOPER</span>
+          </div>
         </div>
-        <div className="hero-metric">
-          <div><span className="metric-label">CURRENT FOCUS</span><strong>Backend systems</strong></div>
-          <span className="metric-arrow">↗</span>
+        <div className="hero-side-note">
+          <span>Currently focused on</span>
+          <strong>APIs / DATABASES / SYSTEM DESIGN</strong>
         </div>
+      </div>
+
+      <div className="hero-bottom">
+        <span>Scroll to explore</span>
+        <div className="hero-line" />
+        <span>01 — 06</span>
       </div>
     </section>
   )
