@@ -5,9 +5,9 @@ const initialFormState = { name: '', email: '', subject: '', message: '' }
 const ContactInfo = memo(function ContactInfo() {
   return (
     <div className="contact-info-card">
-      <a href="mailto:imanikanta016@gmail.com">
+      <a href="mailto:lmanikanta016@gmail.com">
         <span>Email</span>
-        <strong>imanikanta016@gmail.com</strong>
+        <strong>lmanikanta016@gmail.com</strong>
       </a>
       <a href="tel:+917019364686">
         <span>Phone</span>
