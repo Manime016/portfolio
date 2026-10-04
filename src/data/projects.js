@@ -1,27 +1,32 @@
 const projects = [
-   {
-    title: 'shopp111',
-    tags: ['React', 'JavaScript', 'E-commerce'],
+  {
+    title: 'Postgram',
+    tags: ['FastAPI', 'Python', 'MySQL', 'SQLAlchemy', 'Streamlit', 'ImageKit'],
     description:
-      'A modern shopping web app featuring product discovery, cart flow, and a polished responsive interface.',
-    link: 'https://ecomm-seven-indol.vercel.app/',
+      'A full-stack social media application with JWT authentication, image and video uploads, paginated feeds, likes, comments, profiles, and one-to-one messaging.',
+    link: 'https://github.com/Manime016/postgram',
   },
-  
   {
     title: 'AssetHub',
-    tags: ['Flask', 'MySQL'],
+    tags: ['Flask', 'Python', 'MySQL', 'Jinja2'],
     description:
-      'A web application for managing company assets, employees, and departments with role-based access and dashboard analytics.',
-    link: 'https://github.com/Manime016/AssetHub'
+      'A modular asset management system for employees, company assets, assignments, returns, search, authentication, and administrator workflows.',
+    link: 'https://github.com/Manime016/AssetHub',
+  },
+  {
+    title: 'Shopp111',
+    tags: ['React', 'Node.js', 'MongoDB', 'JWT'],
+    description:
+      'A full-stack e-commerce application with product browsing, cart and order workflows, authentication, admin functionality, and responsive interfaces.',
+    link: 'https://ecomm-seven-indol.vercel.app/',
   },
   {
     title: 'Image Steganography Studio',
-    tags: ['Python', 'DSA'],
+    tags: ['Python', 'Pillow', 'OOP', 'LSB'],
     description:
-      'A Python application for hiding and extracting secret messages and files inside images using steganography.',
-    link: 'https://github.com/Manime016/ImageSteganographyStudio'
+      'A Python CLI application that hides and extracts secret messages in images using Least Significant Bit steganography.',
+    link: 'https://github.com/Manime016/ImageSteganographyStudio',
   },
 ]
 
 export default projects
-
