@@ -14,8 +14,8 @@ const Skills = memo(function Skills() {
   return (
     <section id="skills" className="section skills-section">
       <div className="section-heading">
-        <p className="section-label">Skills</p>
-        <h2>Technical skills I use to build apps.</h2>
+        <p className="section-label">02 / Skills</p>
+        <h2>The tools I use to turn ideas into working software.</h2>
       </div>
       <div className="skill-grid">
         {skills.map((skill) => (
@@ -27,4 +27,3 @@ const Skills = memo(function Skills() {
 })
 
 export default Skills
-
