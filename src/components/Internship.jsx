@@ -4,20 +4,21 @@ const Internship = memo(function Internship() {
   return (
     <section id="internship" className="section internship-section">
       <div className="section-heading">
-        <p className="section-label">Internship</p>
-        <h2>Fulltack Developer Internship</h2>
+        <p className="section-label">04 / Experience</p>
+        <h2>Full Stack & Android UI/UX Developer Intern</h2>
+        <p className="section-copy">
+          Excerpt Technologies Pvt. Ltd. • Bengaluru • On-site • Feb 2026 — Jun 2026
+        </p>
       </div>
-      <div className="detail-card">
-        <div>
-          <p className="info-title">Excerpt technologies private ltd, &bull; onsite</p>
-          <p className="info-value">feb 2026 - Jun 2026</p>
-        </div>
-        <ul>
-          <li>Contributed to feature development within an agile software development team following weekly sprint cycles.</li>
-          <li>Worked on REST API integration, debugging, testing, production deployments, and collaborative code reviews.</li>
-          <li>Collaborated with the team to implement new features and fix issues.</li>
-          <li>Developed responsive UI screens and application features while coordinating with backend developers and designers.</li>
 
+      <div className="detail-card experience-card">
+        <div className="experience-badge">4 MONTHS</div>
+        <ul>
+          <li>Contributed to full-stack feature development within an agile team following weekly sprint cycles.</li>
+          <li>Worked across REST API integration, debugging, testing, collaborative code reviews, and deployment workflows.</li>
+          <li>Developed responsive web and mobile UI features using React.js, HTML, CSS, and React Native/Expo.</li>
+          <li>Worked with backend developers and designers to translate requirements and UI designs into application features.</li>
+          <li>Used Git-based version control and gained practical exposure to development and production environments.</li>
         </ul>
       </div>
     </section>
@@ -25,4 +26,3 @@ const Internship = memo(function Internship() {
 })
 
 export default Internship
-
