@@ -1,5 +1,9 @@
 import { memo } from 'react'
 
+const PROFILE_IMAGE_URL =
+  import.meta.env.VITE_PROFILE_IMAGE_URL ||
+  'https://drive.google.com/thumbnail?id=1YqnWHyRvoLkX72vFeQgwDsDBjdmzg08J&sz=w2000'
+
 const Hero = memo(function Hero() {
   return (
     <section id="home" className="hero-section">
@@ -15,8 +19,8 @@ const Hero = memo(function Hero() {
 
         <p className="hero-description">
           I build practical web applications and backend systems with Python,
-          FastAPI, Flask, MySQL, and modern web technologies. I care about
-          clean architecture, reliable APIs, and interfaces that feel good to use.
+          FastAPI, Flask, MySQL, and modern web technologies. I care about clean
+          architecture, reliable APIs, and interfaces that feel good to use.
         </p>
 
         <div className="hero-actions">
@@ -31,23 +35,19 @@ const Hero = memo(function Hero() {
         </div>
       </div>
 
-      <div className="hero-panel">
+      <div className="hero-panel hero-profile">
         <div className="hero-panel__glow" />
-        <div className="code-window">
-          <div className="code-window__bar">
-            <span /><span /><span />
-            <small>manikanta.py</small>
+        <div className="profile-frame">
+          <div
+            className="hero-photo"
+            role="img"
+            aria-label="Portrait of Manikanta L"
+            style={{ backgroundImage: `url("${PROFILE_IMAGE_URL}")` }}
+          />
+          <div className="profile-overlay">
+            <span>PYTHON BACKEND</span>
+            <span>FULL-STACK</span>
           </div>
-          <pre>{`class Developer:
-    stack = [
-        "Python",
-        "FastAPI",
-        "Flask",
-        "MySQL"
-    ]
-
-    focus = "Backend systems"
-    learning = True`}</pre>
         </div>
         <div className="hero-metric">
           <strong>8.21</strong>
