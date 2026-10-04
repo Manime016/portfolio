@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import './App.css'
 import Header from './components/Header'
 
@@ -20,6 +20,16 @@ function SectionFallback() {
 }
 
 function App() {
+  useEffect(() => {
+    const move = (event) => {
+      document.documentElement.style.setProperty('--mouse-x', `${event.clientX}px`)
+      document.documentElement.style.setProperty('--mouse-y', `${event.clientY}px`)
+    }
+
+    window.addEventListener('pointermove', move, { passive: true })
+    return () => window.removeEventListener('pointermove', move)
+  }, [])
+
   return (
     <div className="page-shell">
       <Header />
