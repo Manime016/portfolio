@@ -39,7 +39,6 @@ const Hero = memo(function Hero() {
         <div className="hero-panel__glow" />
         <div className="profile-frame">
           <div className="gui-decor" aria-hidden="true">
-            <span className="gui-ring" />
             <span className="gui-cross" />
             <span className="gui-label">SYSTEM / ONLINE</span>
             <span className="gui-line" />
