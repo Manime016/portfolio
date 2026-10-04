@@ -1,50 +1,27 @@
 import { memo } from 'react'
 
+const entries = [
+  ['2026', 'Master of Computer Applications', 'AMC Engineering College', 'Bengaluru · VTU', 'CGPA 8.21 / 10'],
+  ['2024', 'Bachelor of Computer Applications', 'Government First Grade College, Vijayanagar', 'Bengaluru · Bangalore University', ''],
+  ['12th', 'CBSE', 'Jawahar Navodaya Vidyalaya, Shivamogga', '', '82%'],
+  ['10th', 'CBSE', 'Jawahar Navodaya Vidyalaya, Shivamogga', '', '84%'],
+]
+
 const Education = memo(function Education() {
   return (
     <section id="education" className="section education-section">
-      <div className="section-heading">
-        <p className="section-label">05 / Education</p>
-        <h2>Education</h2>
+      <div className="section-intro">
+        <p className="section-kicker">Education</p>
+        <h2>Academic foundation.</h2>
       </div>
-
-      <div className="education-list">
-        <article className="education-item education-item--featured">
-          <div className="education-year">2026</div>
-          <div>
-            <p className="education-degree">Master of Computer Applications (MCA)</p>
-            <h3>AMC Engineering College</h3>
-            <p>Bannerghatta, Bengaluru • Visvesvaraya Technological University (VTU), Belagavi</p>
-            <strong>CGPA 8.21 / 10.00</strong>
-          </div>
-        </article>
-
-        <article className="education-item">
-          <div className="education-year">2024</div>
-          <div>
-            <p className="education-degree">Bachelor of Computer Applications (BCA)</p>
-            <h3>Government First Grade College, Vijayanagar</h3>
-            <p>Bengaluru • Bangalore University</p>
-          </div>
-        </article>
-
-        <article className="education-item">
-          <div className="education-year">12th</div>
-          <div>
-            <p className="education-degree">CBSE</p>
-            <h3>Jawahar Navodaya Vidyalaya, Shivamogga</h3>
-            <strong>82%</strong>
-          </div>
-        </article>
-
-        <article className="education-item">
-          <div className="education-year">10th</div>
-          <div>
-            <p className="education-degree">CBSE</p>
-            <h3>Jawahar Navodaya Vidyalaya, Shivamogga</h3>
-            <strong>84%</strong>
-          </div>
-        </article>
+      <div className="education-table">
+        {entries.map(([year, degree, school, place, result]) => (
+          <article className="education-row" key={year + degree}>
+            <span className="education-year">{year}</span>
+            <div><h3>{degree}</h3><p>{school}</p>{place && <span>{place}</span>}</div>
+            <strong>{result}</strong>
+          </article>
+        ))}
       </div>
     </section>
   )
