@@ -1,25 +1,24 @@
 import { memo } from 'react'
 import skills from '../data/skills'
 
-const SkillCard = memo(function SkillCard({ label, subtitle }) {
-  return (
-    <div className="skill-card">
-      <strong>{label}</strong>
-      <span>{subtitle}</span>
-    </div>
-  )
-})
-
 const Skills = memo(function Skills() {
   return (
     <section id="skills" className="section skills-section">
-      <div className="section-heading">
-        <p className="section-label">02 / Skills</p>
-        <h2>The tools I use to turn ideas into working software.</h2>
+      <div className="section-intro section-intro-row">
+        <div>
+          <p className="section-kicker">Capabilities</p>
+          <h2>The stack I reach for.</h2>
+        </div>
+        <p className="section-aside">Tools I&apos;ve used in projects and internship work—not a list of technologies I&apos;ve only read about.</p>
       </div>
-      <div className="skill-grid">
+
+      <div className="skills-editorial">
         {skills.map((skill) => (
-          <SkillCard key={skill.label} label={skill.label} subtitle={skill.subtitle} />
+          <div className="skill-row" key={skill.label}>
+            <strong>{skill.label}</strong>
+            <span>{skill.subtitle}</span>
+            <span className="skill-arrow">↗</span>
+          </div>
         ))}
       </div>
     </section>
