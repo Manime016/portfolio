@@ -257,3 +257,46 @@ input:focus,textarea:focus{transform:translateY(-1px)}
   .gui-label{right:16px;top:16px}
   .gui-line{right:16px;bottom:14px;width:60px}
 }
+
+
+/* ===== Premium blue/violet theme + interactive atmosphere ===== */
+:root{
+  --accent:#69a7ff;
+  --accent2:#9b7bff;
+  --cyan:#59e6ff;
+  --accentSoft:rgba(105,167,255,.12);
+  --glow:rgba(105,167,255,.2);
+  --mouse-x:50vw;
+  --mouse-y:40vh;
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:radial-gradient(420px circle at var(--mouse-x) var(--mouse-y),rgba(105,167,255,.055),transparent 70%);
+  transition:background .08s linear;
+}
+.page-shell,main,.site-header{position:relative;z-index:1}
+.hero-profile{--accent:#c8ff3d;--accentSoft:rgba(200,255,61,.12)}
+.hero-profile .profile-frame{--accent:#c8ff3d}
+.hero-profile .hero-metric strong{color:#c8ff3d}
+.hero-profile .profile-overlay span{color:#dfe4ed}
+.hero-section:after{border-color:rgba(105,167,255,.08);box-shadow:0 0 0 42px rgba(105,167,255,.018),0 0 0 84px rgba(105,167,255,.012)}
+.hero-section{
+  background:radial-gradient(circle at 80% 15%,rgba(155,123,255,.2),transparent 28%),radial-gradient(circle at 10% 90%,rgba(105,167,255,.08),transparent 30%),linear-gradient(135deg,#0c1018,#08090d 65%);
+}
+.hero-section:before{background-image:linear-gradient(rgba(105,167,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(105,167,255,.028) 1px,transparent 1px)}
+.section{
+  background:linear-gradient(180deg,rgba(16,20,30,.97),rgba(9,12,18,.99));
+}
+.section::before{background:radial-gradient(circle,rgba(155,123,255,.13),transparent 68%)}
+.info-card::after,.skill-card::after,.project-item::after,.education-item::after{background:radial-gradient(circle,rgba(105,167,255,.09),transparent 68%)}
+.project-tags span:hover{border-color:rgba(105,167,255,.3);color:var(--accent)}
+.text-link::after{background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.project-arrow:hover{box-shadow:0 0 22px rgba(105,167,255,.16)}
+input:focus,textarea:focus{border-color:rgba(105,167,255,.5);box-shadow:0 0 0 3px rgba(105,167,255,.08)}
+.education-item--featured{border-color:rgba(105,167,255,.2);background:linear-gradient(90deg,rgba(105,167,255,.055),rgba(255,255,255,.02))}
+.experience-badge{background:rgba(105,167,255,.11);color:#8fc0ff}
+.skill-card:hover,.info-card:hover,.project-item:hover,.education-item:hover{border-color:rgba(105,167,255,.24)}
