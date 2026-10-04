@@ -1,17 +1,16 @@
 const skills = [
-  { label: 'Python', subtitle: 'Flask' },
-  { label: 'Flask', subtitle: 'Web API' },
-  { label: 'Django', subtitle: 'Full Stack' },
-  { label: 'FastAPI', subtitle: 'APIs' },
-  { label: 'MySQL', subtitle: 'Databases' },
-  { label: 'HTML5', subtitle: 'Markup' },
-  { label: 'CSS3', subtitle: 'Styling' },
-  { label: 'JavaScript', subtitle: 'Frontend' },
-  { label: 'Git', subtitle: 'Versioning' },
-  { label: 'GitHub', subtitle: 'Collaboration' },
-  { label: 'VS Code', subtitle: 'Editor' },
-  { label: 'REST API', subtitle: 'Integration' },
+  { label: 'Python', subtitle: 'Backend & OOP' },
+  { label: 'FastAPI', subtitle: 'REST APIs' },
+  { label: 'Flask', subtitle: 'Web Applications' },
+  { label: 'SQLAlchemy', subtitle: 'ORM & Async ORM' },
+  { label: 'MySQL', subtitle: 'Relational Database' },
+  { label: 'REST APIs', subtitle: 'API Design' },
+  { label: 'JWT', subtitle: 'Authentication' },
+  { label: 'React.js', subtitle: 'Frontend' },
+  { label: 'JavaScript', subtitle: 'Web Development' },
+  { label: 'Streamlit', subtitle: 'Python UI' },
+  { label: 'Git & GitHub', subtitle: 'Version Control' },
+  { label: 'ImageKit', subtitle: 'Media Storage' },
 ]
 
 export default skills
-
