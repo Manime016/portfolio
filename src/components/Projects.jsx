@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import projects from '../data/projects'
 
-const ProjectItem = memo(function ProjectItem({ title, tags, description, link, index }) {
+const ProjectItem = memo(function ProjectItem({ title, tags, description, link, liveUrl, index }) {
   return (
     <article className="project-item">
       <div className="project-number">0{index + 1}</div>
@@ -11,17 +11,27 @@ const ProjectItem = memo(function ProjectItem({ title, tags, description, link, 
             <p className="project-type">PROJECT</p>
             <h3>{title}</h3>
           </div>
-          <a href={link} target="_blank" rel="noreferrer" className="project-arrow" aria-label={`Open ${title}`}>
+          <a href={link} target="_blank" rel="noreferrer" className="project-arrow" aria-label={`Open ${title} source`}>
             ↗
           </a>
         </div>
+
         <p>{description}</p>
+
         <div className="project-tags">
           {tags.map((tag) => <span key={tag}>{tag}</span>)}
         </div>
-        <a href={link} target="_blank" rel="noreferrer" className="text-link">
-          View project on GitHub <span>→</span>
-        </a>
+
+        <div className="project-links">
+          <a href={link} target="_blank" rel="noreferrer" className="text-link">
+            GitHub Repository <span>↗</span>
+          </a>
+          {liveUrl ? (
+            <a href={liveUrl} target="_blank" rel="noreferrer" className="text-link text-link--live">
+              Live Demo <span>↗</span>
+            </a>
+          ) : null}
+        </div>
       </div>
     </article>
   )
