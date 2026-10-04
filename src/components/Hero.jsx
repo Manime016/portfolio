@@ -31,7 +31,7 @@ const Hero = memo(function Hero() {
         <div className="social-links">
           <a href="https://github.com/Manime016" target="_blank" rel="noreferrer">GitHub ↗</a>
           <a href="https://linkedin.com/in/manikanta-l" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          <a href="mailto:imanikanta016@gmail.com">Email ↗</a>
+          <a href="mailto:lmanikanta016@gmail.com">Email ↗</a>
         </div>
       </div>
 
