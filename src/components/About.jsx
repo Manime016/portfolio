@@ -14,12 +14,13 @@ const About = memo(function About() {
   return (
     <section id="about" className="section about-section">
       <div className="section-heading">
-        <p className="section-label">About Me</p>
-        <h2>
-          I&apos;m a Python developer with hands-on experience in building backend systems and full stack web applications.
-        </h2>
+        <p className="section-label">01 / About</p>
+        <h2>Building useful software with a backend-first mindset.</h2>
         <p className="section-copy">
-          I enjoy solving complex problems and turning ideas into real-world applications. I follow clean code practices and I love learning new technologies.
+          I&apos;m an MCA graduate focused on Python backend and full-stack development.
+          I have practical experience from a 4-month academic internship and hands-on
+          projects involving APIs, authentication, databases, media handling, and modular
+          application architecture.
         </p>
       </div>
       <div className="about-cards">
@@ -32,4 +33,3 @@ const About = memo(function About() {
 })
 
 export default About
-
