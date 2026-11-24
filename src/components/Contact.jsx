@@ -53,7 +53,7 @@ const Contact = memo(function Contact() {
           <div><span>Based in</span><strong>Bengaluru, India</strong></div>
           <div className="contact-socials">
             <a href="https://github.com/Manime016" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href="https://linkedin.com/in/manikanta-l" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://www.linkedin.com/in/manikanta-l-583b32287" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           </div>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
