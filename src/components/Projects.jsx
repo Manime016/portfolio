@@ -5,7 +5,7 @@ const ProjectCard = memo(function ProjectCard({ project, featured }) {
   return (
     <article className={`project-card ${featured ? 'project-card--featured' : ''}`}>
       <div className="project-meta">
-        <span>{featured ? 'Featured build' : 'Backend project'}</span>
+        <span>{featured ? 'Featured build' : 'Selected project'}</span>
         <span>↗</span>
       </div>
       <div className="project-main">
@@ -13,7 +13,12 @@ const ProjectCard = memo(function ProjectCard({ project, featured }) {
           <h3>{project.title}</h3>
           <p>{project.description}</p>
         </div>
-        <a href={project.link} target="_blank" rel="noreferrer" className="project-open" aria-label={`Open ${project.title} on GitHub`}>View source <span>↗</span></a>
+        <div className="project-actions">
+          <a href={project.link} target="_blank" rel="noreferrer" className="project-open" aria-label={`Open ${project.title} source on GitHub`}>Source code ↗</a>
+          {project.demo && (
+            <a href={project.demo} target="_blank" rel="noreferrer" className="project-open" aria-label={`Open ${project.title} live demo`}>Live demo ↗</a>
+          )}
+        </div>
       </div>
       <div className="project-tags">
         {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
