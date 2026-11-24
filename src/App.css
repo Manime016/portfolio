@@ -219,3 +219,6 @@ main { display:block; }
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; }
 }
+
+.project-actions { display:flex; flex:0 0 auto; flex-wrap:wrap; gap:16px; }
+@media (max-width:760px) { .project-actions { margin-top:22px; } }
