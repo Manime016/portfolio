@@ -44,6 +44,13 @@ const projects = [
     link: 'https://github.com/Manime016/Net_Suraksha_Hub',
   },
   {
+    title: 'GitHub Daily Log',
+    tags: ['Python', 'GitHub Actions', 'JSON', 'Unit Testing', 'Automation'],
+    description:
+      'Scheduled Python automation that runs tests, generates a daily activity record and commits updated JSON data through a GitHub Actions workflow.',
+    link: 'https://github.com/Manime016/github-daily-log',
+  },
+  {
     title: 'AssetHub',
     tags: ['Python', 'Flask', 'MySQL', 'Jinja2', 'Blueprints'],
     description:
