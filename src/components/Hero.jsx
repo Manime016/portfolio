@@ -20,7 +20,7 @@ const Hero = memo(function Hero() {
         </div>
         <div className="hero-links">
           <a href="https://github.com/Manime016" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a href="https://linkedin.com/in/manikanta-l" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="https://www.linkedin.com/in/manikanta-l-583b32287" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           <a href="mailto:lmanikanta016@gmail.com">lmanikanta016@gmail.com ↗</a>
         </div>
       </div>
