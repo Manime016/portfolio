@@ -29,13 +29,6 @@ const projects = [
       'Music application with a Python API for song search and uploads, user accounts, liked songs and playlist management, with a browser-based frontend.',
     link: 'https://github.com/Manime016/zazMusic',
   },
-  {
-    title: 'Net Suraksha Hub',
-    tags: ['React', 'JavaScript', 'Express', 'MongoDB', 'JWT', 'Cloudinary'],
-    description:
-      'Full-stack learning portal with course management, assessments, complaint workflows and certificate generation, supported by a React frontend and Express API.',
-    link: 'https://github.com/Manime016/Net_Suraksha_Hub',
-  },
 ]
 
 export default projects
