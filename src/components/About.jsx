@@ -20,7 +20,7 @@ const About = memo(function About() {
 
         <div className="about-stats">
           <div><strong>8.21</strong><span>MCA CGPA</span></div>
-          <div><strong>5</strong><span>Featured projects</span></div>
+          <div><strong>4</strong><span>Featured projects</span></div>
           <div><strong>4 mo</strong><span>Industry internship</span></div>
           <div><strong>Python</strong><span>Primary stack</span></div>
         </div>
