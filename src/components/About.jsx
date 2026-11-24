@@ -14,13 +14,13 @@ const About = memo(function About() {
             My work sits close to the backend: designing REST APIs, connecting applications to databases, handling authentication, payments, media, and the business rules that make products actually work.
           </p>
           <p>
-            I&apos;ve built production-style projects with FastAPI and Flask, worked with MySQL and MongoDB, and gained practical team experience during a four-month internship at Excerpt Technologies.
+            I build with Python, FastAPI and Flask, and have worked with MySQL, MongoDB, SQLAlchemy and background processing. My projects also include full-stack applications using React and Node.js, alongside practical team experience during a four-month internship at Excerpt Technologies.
           </p>
         </div>
 
         <div className="about-stats">
           <div><strong>8.21</strong><span>MCA CGPA</span></div>
-          <div><strong>4</strong><span>Selected projects</span></div>
+          <div><strong>7</strong><span>Featured projects</span></div>
           <div><strong>4 mo</strong><span>Industry internship</span></div>
           <div><strong>Python</strong><span>Primary stack</span></div>
         </div>
